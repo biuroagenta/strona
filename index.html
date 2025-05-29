@@ -1,104 +1,132 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Business Company Template">
-  <title>Business Co</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Business Co</nmae>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo">Business Co</h1>
-      <button id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <nav id="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Header & Hero -->
+  <header class="hero">
+    <nav>
+      <div class="logo">Business Co</div>
+      <div class="menu-toggle">☰</div>
+    </nav>
+    <div class="hero-content">
+      <h1>We help your <br>brand to be <br>recognizable</h1>
+      <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur</p>
+      <p class="caption">Image from Freepik</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+    <div class="hero-image">
+      <img src="hero.jpg" alt="Business people">
     </div>
   </header>
 
-  <section id="home" class="hero section active">
-    <div class="container text-center">
-      <h2>We help your brand to be recognizable</h2>
-      <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
-      <a href="#services" class="btn">Learn More</a>
+  <!-- Features -->
+  <section class="features">
+    <div class="feature black">
+      <h2>Quality Product</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+    </div>
+    <div class="feature blue-light">
+      <h2>Growth Strategy</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+    </div>
+    <div class="feature blue">
+      <h2>Competitive Price</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
     </div>
   </section>
 
-  <section id="features" class="section features">
-    <div class="container grid-3">
-      <div class="feature">
-        <h3>Quality Product</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="feature">
-        <h3>Growth Strategy</h3>
-        <p>Curabitur blandit tempus porttitor vulputate velit.</p>
-      </div>
-      <div class="feature">
-        <h3>Competitive Price</h3>
-        <p>Etiam porta sem malesuada magna mollis euismod.</p>
-      </div>
+  <!-- About -->
+  <section class="about">
+    <div class="icon">⚓</div>
+    <h2>About Company</h2>
+    <p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.</p>
+    <a href="#" class="btn-outline">Our Work</a>
+  </section>
+
+  <!-- Mid Section -->
+  <section class="mid">
+    <div class="mid-image">
+      <img src="mid.jpg" alt="Smiling man">
+    </div>
+    <div class="mid-content">
+      <h2>Doing The Right Thing, At The Right Time</h2>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#" class="btn">Learn More</a>
     </div>
   </section>
 
-  <section id="about" class="section about">
-    <div class="container split">
-      <div class="text">
-        <h2>About Company</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#services" class="btn outline">Our Work</a>
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p class="subtitle">Consectetur adipiscing elit nullam nunc justo sagittis suscipit ultricies.</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="icon">🎨</div>
+        <h3>Branding</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
       </div>
-      <div class="image"><img src="images/about.jpg" alt="About"></div>
-    </div>
-  </section>
-
-  <section id="services" class="section services">
-    <div class="container text-center">
-      <h2>Our Services</h2>
-      <div class="grid-3 icons">
-        <div class="item"><i class="icon"></i><h4>Branding</h4></div>
-        <div class="item"><i class="icon"></i><h4>Web Design</h4></div>
-        <div class="item"><i class="icon"></i><h4>Social Media</h4></div>
+      <div class="service-item">
+        <div class="icon">📣</div>
+        <h3>Branding</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+      </div>
+      <div class="service-item">
+        <div class="icon">💻</div>
+        <h3>Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+      </div>
+      <div class="service-item">
+        <div class="icon">🖥️</div>
+        <h3>Web Design</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+      </div>
+      <div class="service-item">
+        <div class="icon">🔗</div>
+        <h3>Social Media</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+      </div>
+      <div class="service-item">
+        <div class="icon">🛒</div>
+        <h3>Ecommerce</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
       </div>
     </div>
+    <a href="#" class="btn-outline">Learn More</a>
   </section>
 
-  <section id="pricing" class="section cta">
-    <div class="container text-center">
-      <h2>Get to know today!</h2>
-      <p>Sample text here for call to action.</p>
-      <a href="#contact" class="btn">Read More</a>
+  <!-- Communication Section -->
+  <section class="communication">
+    <div class="comm-content">
+      <h2>We engage positive communication</h2>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+    <div class="comm-image">
+      <img src="comm.jpg" alt="Business meeting">
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container text-center">
-      <p>Sample footer text &copy; 2025</p>
-    </div>
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Get to know today!</n2>
+    <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+    <a href="#" class="btn-outline">Read More</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Business And Marketing</h2>
+    <p>ullam mauris nibh, pellentesque quis tincidunt eu, tincidunt sed nulla, sit amet tristique elit finibus.</p>
+    <a href="#" class="btn">View More</a>
+    <p class="footer-note">Sample footer text</p>
   </footer>
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
-    const sections = document.querySelectorAll('.section');
-    toggle.addEventListener('click', () => nav.classList.toggle('open'));
-    document.querySelectorAll('nav a').forEach(link =>
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        sections.forEach(s => s.classList.remove('active'));
-        document.querySelector(link.getAttribute('href')).classList.add('active');
-        nav.classList.remove('open');
-      })
-    );
-  </script>
 </body>
 </html>
