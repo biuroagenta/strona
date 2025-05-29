@@ -1,64 +1,88 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jednostronicowy szablon z tekstem Lorem Ipsum">
-  <title>Sample Page</title>
+  <meta name="description" content="Business Company Template">
+  <title>Business Co</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">Sample Brand</h1>
-      <button id="menu-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <h1 class="logo">Business Co</h1>
+      <button id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <nav id="nav">
         <ul>
-          <li><a href="#section1">Sekcja 1</a></li>
-          <li><a href="#section2">Sekcja 2</a></li>
-          <li><a href="#section3">Sekcja 3</a></li>
-          <li><a href="#section4">Sekcja 4</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="section1" class="section active">
-      <div class="container">
-        <h2>Sekcja 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-      </div>
-    </section>
+  <section id="home" class="hero section active">
+    <div class="container text-center">
+      <h2>We help your brand to be recognizable</h2>
+      <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+      <a href="#services" class="btn">Learn More</a>
+    </div>
+  </section>
 
-    <section id="section2" class="section">
-      <div class="container">
-        <h2>Sekcja 2</h2>
-        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+  <section id="features" class="section features">
+    <div class="container grid-3">
+      <div class="feature">
+        <h3>Quality Product</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-    </section>
-
-    <section id="section3" class="section">
-      <div class="container">
-        <h2>Sekcja 3</h2>
-        <p>Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+      <div class="feature">
+        <h3>Growth Strategy</h3>
+        <p>Curabitur blandit tempus porttitor vulputate velit.</p>
       </div>
-    </section>
-
-    <section id="section4" class="section">
-      <div class="container">
-        <h2>Sekcja 4</h2>
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <div class="feature">
+        <h3>Competitive Price</h3>
+        <p>Etiam porta sem malesuada magna mollis euismod.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Sample Brand</p>
+  <section id="about" class="section about">
+    <div class="container split">
+      <div class="text">
+        <h2>About Company</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#services" class="btn outline">Our Work</a>
+      </div>
+      <div class="image"><img src="images/about.jpg" alt="About"></div>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container text-center">
+      <h2>Our Services</h2>
+      <div class="grid-3 icons">
+        <div class="item"><i class="icon"></i><h4>Branding</h4></div>
+        <div class="item"><i class="icon"></i><h4>Web Design</h4></div>
+        <div class="item"><i class="icon"></i><h4>Social Media</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section cta">
+    <div class="container text-center">
+      <h2>Get to know today!</h2>
+      <p>Sample text here for call to action.</p>
+      <a href="#contact" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>Sample footer text &copy; 2025</p>
     </div>
   </footer>
 
@@ -66,17 +90,15 @@
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
     const sections = document.querySelectorAll('.section');
-
     toggle.addEventListener('click', () => nav.classList.toggle('open'));
-    document.querySelectorAll('nav a').forEach(link => {
+    document.querySelectorAll('nav a').forEach(link =>
       link.addEventListener('click', e => {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        sections.forEach(sec => sec.classList.remove('active'));
-        target.classList.add('active');
+        sections.forEach(s => s.classList.remove('active'));
+        document.querySelector(link.getAttribute('href')).classList.add('active');
         nav.classList.remove('open');
-      });
-    });
+      })
+    );
   </script>
 </body>
 </html>
