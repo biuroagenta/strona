@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nowoczesna strona firmowa - us³ugi finansowe i administracyjne">
+  <title>Moja Firma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Moja Firma</h1>
+      <button id="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a href="#home">Strona g³ówna</a></li>
+          <li><a href="#services">Us³ugi</a></li>
+          <li><a href="#about">O nas</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section active">
+      <div class="container">
+        <h2>Witamy!</h2>
+        <p>Œwiadczymy us³ugi wspomagaj¹ce dzia³alnoœæ finansow¹ i administracyjn¹.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Nasze us³ugi</h2>
+        <ul>
+          <li>Wsparcie w zakresie finansów</li>
+          <li>Obs³uga administracyjna biura</li>
+          <li>Rejestracja i przekierowanie domeny</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>O nas</h2>
+        <p>Jesteœmy firm¹ z doœwiadczeniem od 2010 roku, ³¹cz¹c¹ nowoczesne technologie z profesjonalizmem.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:kontakt@mojafirma.pl">kontakt@mojafirma.pl</a><br>
+        Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Moja Firma</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    const sections = document.querySelectorAll('.section');
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        sections.forEach(sec => sec.classList.remove('active'));
+        target.classList.add('active');
+        if (nav.classList.contains('open')) nav.classList.remove('open');
+      });
+    });
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
