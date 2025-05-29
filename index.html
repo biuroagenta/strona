@@ -30,32 +30,41 @@
       <div class="container">
         <h2>Witamy!</h2>
         <p>Świadczymy usługi wspomagające działalność finansową i administracyjną.</p>
+        <a href="#services" class="btn">Dowiedz się więcej</a>
       </div>
     </section>
 
     <section id="services" class="section">
-      <div class="container">
-        <h2>Nasze usługi</h2>
-        <ul>
-          <li>Wsparcie w zakresie finansów</li>
-          <li>Obsługa administracyjna biura</li>
-          <li>Rejestracja i przekierowanie domeny</li>
-        </ul>
+      <div class="container features">
+        <div class="block">
+          <h3>Quality Product</h3>
+          <p>Krótkie info o jakości produktów i usług.</p>
+        </div>
+        <div class="block">
+          <h3>Growth Strategy</h3>
+          <p>Jak pomagamy rozwijać Twój biznes.</p>
+        </div>
+        <div class="block">
+          <h3>Competitive Price</h3>
+          <p>Oferujemy konkurencyjne ceny.</p>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section about">
       <div class="container">
         <h2>O nas</h2>
         <p>Jesteśmy firmą z doświadczeniem od 2010 roku, łączącą nowoczesne technologie z profesjonalizmem.</p>
+        <a href="#contact" class="btn">Zobacz kontakt</a>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section cta">
       <div class="container">
         <h2>Kontakt</h2>
-        <p>Email: <a href="mailto:kontakt@mojafirma.pl">kontakt@mojafirma.pl</a><br>
-        Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+        <p>Masz pytania? Skontaktuj się z nami!</p>
+        <p>Email: <a href="mailto:kontakt@mojafirma.pl">kontakt@mojafirma.pl</a></p>
+        <p>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
       </div>
     </section>
   </main>
@@ -70,6 +79,8 @@
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
     const sections = document.querySelectorAll('.section');
+
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
@@ -79,7 +90,6 @@
         nav.classList.remove('open');
       });
     });
-    toggle.addEventListener('click', () => nav.classList.toggle('open'));
   </script>
 </body>
 </html>
